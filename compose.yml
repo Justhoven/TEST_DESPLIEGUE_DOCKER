@@ -1,12 +1,12 @@
 services:  
   db:
-    image: rsanzfloridauni/mi_cine:v1
+    image: justhoven/mi_cine:v1
     container_name: contenedorMiCine
     ports:
       - "3306:3306"
   
   php:
-    image: rsanzfloridauni/mi_app_cine:v1
+    image: justhoven/mi_app_cine:v1
     container_name: contenedorMiApp
     ports:
       - "8080:80"

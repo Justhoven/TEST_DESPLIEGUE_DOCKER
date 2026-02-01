@@ -15,13 +15,12 @@
             |-- index.php
         |-- compose.yml
         |-- -gitignore
-        
+
 
     ## APUNTES:
     - cine.sql puede ser un archivo que ya me den o un codigo a copiar, en cuyo caso, sí crearía cine.sql y copio el código.
 
     - index.php es la conexión mysqli a la BD y la aplicación.
-
 
 
 2. Creamos un repositorio GitHub. Ponemos los secretos:
@@ -33,13 +32,13 @@
     - REMOTE_USER --> Usuario de la MV EC2 (ubuntu)
 
 
-
-2. Creamos instancia AWS con IP elástica y claves vockey (si no la tenemos ya creada)
+3. Creamos instancia AWS con IP elástica y claves vockey (si no la tenemos ya creada)
 
     ## IMPORTANTE, GRUPOS DE SEGURIDAD. 
     Debemos permitir que se pueda acceder desde el puerto 8080 y 8081 (para Docker y phpMyAdmin)
 
-3. Instalamos Docker y Docker Compose en la MV:
+
+4. Instalamos Docker y Docker Compose en la MV:
 
     ### DOCKER:
 
@@ -59,8 +58,24 @@
     - docker-compose --version          (verificar instalación)
 
     ### RECOMENDADO
-    Para usar Docker sin SUDO:
+    Para usar Docker por comando sin SUDO:
 
     - sudo usermod -aG docker ubuntu
 
-4. 
+
+5. Rellenamos deploy.yml, los Dockerfiles y el compose.yml
+
+    - Copiar de aquí y hacer los cambios pertinentes.
+    - Cambiar también los correos, si no, la imagen se sube al DockerHub de Roberto!
+
+
+6. Add, Commit y Push. Si quiero renombrar rama de master a main:
+
+    - git branch -m main
+
+
+7. Accedo a:
+
+    - IP:8080/mi_app_cine   (en este caso).
+    - IP:8081               (phpMyAdmin)
+
