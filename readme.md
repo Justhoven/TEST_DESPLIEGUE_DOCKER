@@ -79,3 +79,11 @@
     - IP:8080/mi_app_cine   (en este caso).
     - IP:8081               (phpMyAdmin)
 
+
+## POSIBLES FALLOS
+
+Si al hacer un despliegue automático da error porque no tengo suficiente espacio en el dispositivo (MV), debido a que me he equivocado y he subido a la MV con la cuenta DockerHub del profe, ir a la terminal de la MV y poner:
+
+- docker images                                 (para ver las imágenes)
+- docker rmi usuario_dockerhub/aplicación:v1    (borramos las que no interesen)
+
